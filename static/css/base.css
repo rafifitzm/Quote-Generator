@@ -1,0 +1,50 @@
+/* RESET + BASE TYPOGRAPHY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;         /* increased for breathing room */
+    padding: 2rem 1rem;
+}
+
+
+/* MATCHING BUTTONS AND LINKS */
+
+/* Base style */
+button {
+    all: unset;
+    cursor: pointer;
+}
+a, button {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover state */
+a:hover {
+    text-decoration: none;
+}
+
+/* Focus state for accessibility */
+a:focus, button:focus {
+    outline: none;
+}
+
+/* Active (clicked) state */
+a:active, button:active {
+    transform: scale(0.98);
+}
+
+
+
+
+

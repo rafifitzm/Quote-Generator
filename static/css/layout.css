@@ -1,0 +1,16 @@
+/* GENERAL PAGE STRUCTURE */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    border-radius: 0.75rem;
+}
+
+.header, .footer {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.main {
+    padding: 2rem 0;
+}
