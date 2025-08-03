@@ -1,0 +1,226 @@
+/* BUTTONS AND LINKS COLOUR PALETTE 1 - DEFAULT BLUE THEME */
+.btn-1 {
+    color: #1f2937; /* dark gray text */
+    background-color: transparent;
+    border: 2px solid transparent;
+}
+.btn-1:hover {
+  color: #ffffff;
+  background-color: #3b82f6; /* nice blue */
+  border-color: #3b82f6;
+}
+.btn-1:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+}
+.btn-1:active {
+  background-color: #2563eb; /* darker blue */
+}
+
+
+/* BUTTONS AND LINKS COLOUR PALETTE 2 - Warm Amber & Soft Gold Theme */
+.btn-2 {
+  color: #FACC15; /* or #7C4B00 Golden Brown */
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.btn-2:hover {
+  color: #FFFCF6;            /* Cream Mist */
+  background-color: #FACC15; /* Soft Gold */
+  border-color: #EAB308;     /* Golden Amber */
+}
+
+.btn-2:focus {
+  box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.3); /* Amber Glow */
+}
+
+.btn-2:active {
+  background-color: #EAB308; /* Golden Amber */
+}
+
+
+/* BODY COLOUR PALETTE 1 - DEFAULT BLUE THEME */
+.body-1 {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+/* BODY COLOUR PALETTE 2 - ELEGANT GOLD THEME */
+.body-2 {
+    background-color: #FFFBF3; /* warm light */
+    color: #4B5563; /* soft indigo */
+}
+
+/* CONTAINER COLOUR PALETTE 2 - ELEGANT GOLD THEME */
+.container-2 {
+    background-color: #FFFFFF; /* card-like center area */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* BUTTONS AND LINKS COLOUR PALETTE 3 - Soft Slate & Misty Blue Theme */
+.btn-3 {
+  color: #475569; /* Cool Slate */
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.btn-3:hover {
+  color: #FDFCFB;            /* Ivory Mist */
+  background-color: #3B82F6; /* Misty Blue */
+  border-color: #2563EB;     /* Ocean Deep */
+}
+
+.btn-3:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4); /* Mist Glow */
+}
+
+.btn-3:active {
+  background-color: #2563EB; /* Ocean Deep */
+}
+
+
+/* BODY COLOUR PALETTE 3 - Soft Slate & Misty Blue Theme */
+.body-3 {
+  background-color: #F8FAFC; /* Cloud White */
+  color: #475569;            /* Cool Slate */
+}
+
+
+/* CONTAINER COLOUR PALETTE 3 - Soft Slate & Misty Blue Theme */
+.container-3 {
+  background-color: #FFFFFF; /* Pure White */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.card-3 {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+/* BUTTONS AND LINKS COLOUR PALETTE 4 - Deep Crimson & Misty Rose Theme */
+.btn-4 {
+  color: #EF4444; /* Misty Rose Red */
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.btn-4:hover {
+  color: #FDF9F9;            /* Ivory Rose */
+  background-color: #EF4444; /* Misty Rose Red */
+  border-color: #DC2626;     /* Velvet Red */
+}
+
+.btn-4:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.3); /* Crimson Glow */
+}
+
+.btn-4:active {
+  background-color: #DC2626; /* Velvet Red */
+}
+
+
+/* BUTTONS AND LINKS COLOUR PALETTE 5 - Serene Pine & Misty Mint Theme */
+.btn-5 {
+  color: #10B981; /* or #1E4632 Pine Green */
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.btn-5:hover {
+  color: #F7FCF9;            /* Mint Mist */
+  background-color: #10B981; /* Misty Mint */
+  border-color: #059669;     /* Deep Emerald */
+}
+
+.btn-5:focus {
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3); /* Mint Glow */
+}
+
+.btn-5:active {
+  background-color: #059669; /* Deep Emerald */
+}
+
+
+
+
+
+
+
+
+/* FORM ELEMENTS */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+
+/* QUOTE LIST */
+.quote-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.quote-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.quote-item .menu {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* main animation */
+.main *:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+
+/* DARK MODE OVERRIDE */
+body.dark-mode {
+  background-color: #1F2937; /* Slate Gray */
+  color: #E5E7EB;            /* Light Gray Text */
+}
+
+body.dark-mode .container {
+  background-color: #111827; /* Almost Black */
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="password"],
+body.dark-mode input[type="number"] {
+  background-color: #374151; /* Input background */
+  color: #F9FAFB;
+  border: 1px solid #4B5563;
+}
+
+
+body.dark-mode .quote-item {
+    background-color: #1F2937;
+}
+
+/*body.dark-mode .btn-3 {
+  color: #FDFCFB;
+  background-color: #3B82F6;
+  border-color: #2563EB;
+}*/
