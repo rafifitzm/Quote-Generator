@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body class="body-3">
+    <div class="container container-3">
+        <div class="header">
+            {% block header %}{% endblock %}
+        </div>
+        <div class="main">
+            {% block content %}{% endblock %}
+        </div>
+        <div class="footer">
+            {% block footer %}{% endblock %}
+        </div>
+    </div>
+
+    <script>
+        if (localStorage.getItem("darkMode") === "true") {
+            document.body.classList.add("dark-mode");
+        }
+        function toggleDarkMode() {
+            const isDark = document.body.classList.toggle("dark-mode");
+            localStorage.setItem("darkMode", isDark)
+        }
+    </script>
+</body>
+</html>

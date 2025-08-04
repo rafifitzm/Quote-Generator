@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h2 class="heading-xl">Welcome, {{ current_user.username }}</h2>
+    <a href="{{ url_for('auth.logout') }}" class="btn-3">Log out</a>
+
+    <h3>Your Quotes:</h3>
+    {% if quotes %}
+        <ul class="quote-list">
+            {% for quote in quotes %}
+                <li class="quote-item">
+                    <a href="{{ url_for('main.generate_pdf', quote_id=quote.id) }}" class="btn-3">
+                        {{ quote.client }} - {{ quote.service }} - ${{ quote.price }}
+                    </a>
+                    <form method="POST" action="{{ url_for('main.delete_quote', quote_id=quote.id) }}" class="delete-form">
+                        <button class="btn-4" type="submit">delete</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No quotes yet.</p>
+    {% endif %}
+    <a href="{{ url_for('main.add_quote') }}" class="btn-3">Create New Quote</a>
+    <button onclick="toggleDarkMode()" class="btn-3">Toggle Dark Mode</button>
+{% endblock %}

@@ -1,0 +1,38 @@
+/* Simple, reusable helper classes */
+
+/* === TEXT ALIGNMENT === */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* === MARGINS === */
+.mt-1 { margin-top: 0.5rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mb-2 { margin-bottom: 1rem; }
+
+/* === PADDING === */
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+
+/* === BACKGROUND COLORS === */
+.bg-light { background-color: #f1f1f1; }
+.bg-white { background-color: white; }
+
+/* === HEADINGS === */
+.heading-xl {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1E293B;
+  margin-bottom: 1rem;
+}
+.heading-xl::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #3B82F6;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
