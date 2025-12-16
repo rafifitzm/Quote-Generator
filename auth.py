@@ -2,6 +2,7 @@ from extensions import db, login_manager
 from models import User
 from flask_login import login_user, logout_user, login_required, current_user
 from flask import Blueprint, render_template, request, redirect, url_for
+from werkzeug.security import generate_password_hash
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -14,7 +15,12 @@ def register():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        new_user = User(username=username, password=password)
+
+        # Hash the password
+        hashed_password = generate_password_hash(password, method='sha256')
+
+        # Store the hashed password in the database
+        new_user = User(username=username, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
         return redirect(url_for('auth.login'))  # Runs if POST
@@ -25,8 +31,12 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        user = User.query.filter_by(username=username, password=password).first()
-        if user:
+
+        # Find the user by the provided username
+        user = User.query.filter_by(username=username).first()
+
+        # Verify the password
+        if user and check_password_hash(user.password, password):
             login_user(user)
             return redirect(url_for('main.dashboard'))  # Runs if POST AND user
         return render_template('login.html', error="Invalid credentials")  # Runs if POST AND NOT user
